@@ -22,12 +22,60 @@ body {
   font-size: 16px;
   line-height: 1.5;
   padding-top: 70px;
+  font: 100%/1.5 system-ui;
 }
+
 
 a {
   color: var(--text);
   text-decoration: none;
 }
+
+.profile-picture {
+  width: 150px; 
+  height: auto; 
+  border-radius: 75px; 
+}
+
+
+.about-me-wrapper {
+  display: flex;
+  align-items: center;  
+  gap: 2rem; 
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  padding: 0 1rem;            
+}
+
+.about-me-content {
+  flex: 1; 
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(255,255,255,0.05);
+  transition: transform 0.3s;
+}
+
+.experience-wrapper, .project-wrapper  {
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  padding: 0 1rem;
+}
+
+.experience-content, .project-content {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(255,255,255,0.05);
+  transition: transform 0.3s;
+}
+
+
+.education-content {
+  max-width: 880px; 
+  margin: 0 auto;
+}
+
 
 .container {
   max-width: 1100px;
@@ -36,13 +84,14 @@ a {
 }
 
 .site-header {
-  background: var(--bg);
+  background: #FFFFFF;
   padding: 0.75rem 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #1e1e1e;
+  opacity: 1
 }
 
 .site-header .container {
@@ -50,6 +99,7 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  opacity: 1
 }
 
 .logo a {
@@ -69,22 +119,6 @@ a {
   font-weight: 500;
 }
 
-
-
-.resume-button {
-  background: var(--accent);
-  color: #003b37;
-  padding: 0.4rem 0.9rem;
-  font-size: 0.9rem;
-  border-radius: 6px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  transition: background 0.3s;
-}
-
-.resume-button i { margin-right: 0.4rem; }
-.resume-button:hover { background: #00b3a1; }
 
 section {
   padding: 1rem 1rem;
@@ -112,11 +146,7 @@ h3 {
   padding-top: 4.25rem;
 }
 
-.experience-wrapper, .project-wrapper, .about-me-wrapper {
-  max-width: 1100px;
-  margin: 0 auto 1rem;
-  padding: 0 1rem;
-}
+
 
 .experience-content, .project-content, .about-me-content {
   background: var(--card);
@@ -191,27 +221,6 @@ footer#contact-info {
   border-top: 1px solid #1a1a1a;
 }
 
-@media (max-width: 768px) {
-  .contact-info {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.25rem;
-  }
-
-  .project-tiles {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-tile {
-    width: 100%;
-  }
-
-  .resume-button {
-    margin-top: 0.5rem;
-  }
-}
-
 .contact-info i {
   font-size: 1.1rem;
   margin-left: 0.5rem;
@@ -223,8 +232,15 @@ footer#contact-info {
   color: var(--accent);
 }
 
-.experience-content,
-.education-content {
-  max-width: 880px; /* match the visual width of 3 tiles + gaps */
-  margin: 0 auto;
+
+.link {
+  color: blue;              
+  text-decoration: underline;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-left: 2rem;
+}
+
+.link:hover {
+  color: darkblue;    
 }
