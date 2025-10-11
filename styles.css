@@ -1,246 +1,158 @@
-:root {
-  --bg: #White;
-  --text: Black;
-  --muted: #aaa;
-  --card: #White;
-  --accent: #F0F0F0;
-  --offwhite: #f5f5f0;
+html {
+  --color-accent: oklch(65% 50% 0);
+  accent-color: var(--color-accent);
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  font-size: 16px;
+  max-width: 100ch;
+  margin-inline: max(1em, (100% - 100ch) / 2);
+  padding: 0 1em;
+  font-family: system-ui, sans-serif;
   line-height: 1.5;
-  padding-top: 70px;
-  font: 100%/1.5 system-ui;
 }
 
+ul, li {
+  display: contents;
+  margin: 0;
+  padding: 0;
+}
 
-a {
-  color: var(--text);
+nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid oklch(80% 3% 200);
+}
+
+nav a {
+  flex: 1;
   text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
+  text-align: center;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.3em;
+  pointer-events: none;
+}
+
+nav a:hover:not(.current) {
+  border-bottom: 0.4em solid var(--color-accent);
 }
 
 .profile-picture {
-  width: 150px; 
-  height: auto; 
-  border-radius: 75px; 
+  width: 150px;
+  height: auto;
+  border-radius: 75px;
 }
 
 
-.about-me-wrapper {
-  display: flex;
-  align-items: center;  
-  gap: 2rem; 
-  max-width: 1100px;
-  margin: 0 auto 1rem;
-  padding: 0 1rem;            
+form {
+  display: grid;
+  font: inherit;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
 }
 
-.about-me-content {
-  flex: 1; 
-  background: var(--card);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(255,255,255,0.05);
-  transition: transform 0.3s;
+form label {
+  display: contents;
+  margin-block: 0.5em;
+  grid-template-columns: subgrid;
 }
 
-.experience-wrapper, .project-wrapper  {
-  max-width: 1100px;
-  margin: 0 auto 1rem;
-  padding: 0 1rem;
-}
-
-.experience-content, .project-content {
-  background: var(--card);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(255,255,255,0.05);
-  transition: transform 0.3s;
-}
-
-
-.education-content {
-  max-width: 880px; 
-  margin: 0 auto;
-}
-
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.site-header {
-  background: #FFFFFF;
-  padding: 0.75rem 0;
-  position: fixed;
+form input,
+form textarea {
   width: 100%;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #1e1e1e;
-  opacity: 1
+  box-sizing: border-box;
+  padding: 0.5em;
+  font: inherit;
 }
 
-.site-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  opacity: 1
+form button {
+  width: 100%;
+  padding: 0.5em;
+  font: inherit;
+  grid-column: 1 / -1;
 }
 
-.logo a {
-  font-size: 1.3rem;
-  font-weight: bold;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+  padding: 1em;
 }
 
-.contact-info {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em;
 }
 
-.contact-info a {
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-
-section {
-  padding: 1rem 1rem;
-}
-
-h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.about-text p,
-.experience-content p,
-.project-tile p {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.about-me {
-  padding-top: 4.25rem;
-}
-
-
-
-.experience-content, .project-content, .about-me-content {
-  background: var(--card);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(255,255,255,0.05);
-  transition: transform 0.3s;
-}
-
-.experience-content:hover {
-  transform: translateY(-3px);
-}
-
-.experience-header, .about-me-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
-}
-
-.experience-header h3, .about-me-header h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
+.projects article h2 {
   margin: 0;
 }
 
-.date-range {
-  font-size: 0.9rem;
-  color: var(--muted);
-  font-weight: 400;
+ h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  text-wrap: balance;
 }
 
-
-.project-tiles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
+/*
+h2 {
+  font-size: 2rem;
+  line-height: 1.1;
+  text-wrap: balance;
+  margin: 0;} */
+h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
 }
 
-.project-tile {
-  background: var(--card);
-  padding: 1.5rem;
-  border-radius: 10px;
-  width: 280px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+section {
+  margin-bottom: 2rem;
 }
 
-.project-tile h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
+section > header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
 }
 
-.project-tile p {
-  font-size: 0.9rem;
+article {
+  margin-bottom: 1.5rem;
+  padding: 1em;
+  border: 1px solid oklch(80% 3% 200);
+  border-radius: 8px;
+  background-color: oklch(95% 0% 0);
+  display: grid;
+  gap: 0.5em;
 }
 
-.project-tile:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+article header h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25em;
 }
 
-footer#contact-info {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  font-size: 0.85rem;
-  color: #888;
-  background: var(--bg);
-  border-top: 1px solid #1a1a1a;
+article time {
+  font-size: 0.875rem;
+  color: gray;
 }
 
-.contact-info i {
-  font-size: 1.1rem;
-  margin-left: 0.5rem;
-  color: var(--text);
-  transition: color 0.3s ease;
+article a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.contact-info a:hover i {
-  color: var(--accent);
-}
-
-
-.link {
-  color: blue;              
+article a:hover {
   text-decoration: underline;
-  font-size: 1rem;
-  font-weight: 500;
-  padding-left: 2rem;
 }
 
-.link:hover {
-  color: darkblue;    
+p {
+  margin: 0.25em 0;
 }
+
