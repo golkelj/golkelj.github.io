@@ -36,7 +36,7 @@ document.body.prepend(nav);
 // Determine base path for local vs GitHub Pages
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
-  : "/golkelj.github.io/";         // GitHub Pages repo name
+  : "/";         // GitHub Pages repo name
 
 // Add navigation links
 for (let p of pages) {
