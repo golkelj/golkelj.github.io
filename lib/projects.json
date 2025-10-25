@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Solar Energy Dashboard",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A dashboard for visualizing solar panel output across multiple locations."
+  },
+  {
+    "title": "Smart Home Automation",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Automating lights, climate, and security systems for energy efficiency."
+  },
+  {
+    "title": "AI Chatbot",
+    "year": "2022",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A conversational AI bot that assists users with daily tasks."
+  },
+  {
+    "title": "E-Commerce Analytics",
+    "year": "2021",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Analyzing customer behavior to optimize product recommendations."
+  },
+  {
+    "title": "Virtual Art Gallery",
+    "year": "2020",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "An immersive 3D experience for viewing artwork online."
+  },
+  {
+    "title": "Fitness Tracker App",
+    "year": "2019",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Track workouts, steps, and calories with social sharing features."
+  },
+  {
+    "title": "Blockchain Voting System",
+    "year": "2018",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Secure, decentralized voting using blockchain technology."
+  },
+  {
+    "title": "Weather Forecast Widget",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A customizable widget providing local weather forecasts in real-time."
+  },
+  {
+    "title": "Online Learning Platform",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "An interactive platform for students to learn and take assessments online."
+  },
+  {
+    "title": "Recipe Recommendation Engine",
+    "year": "2022",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Suggests recipes based on available ingredients and dietary preferences."
+  },
+  {
+    "title": "Personal Finance Tracker",
+    "year": "2021",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Helps users manage expenses, budgets, and savings goals."
+  },
+  {
+    "title": "Interactive Map Explorer",
+    "year": "2020",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Explore geographic data with interactive filters and overlays."
+  }
+]
