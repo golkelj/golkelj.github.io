@@ -22,6 +22,7 @@ let pages = [
   { url: 'contact/', title: 'Contact Me' },
   { url: 'projects/', title: 'Projects' },
   { url: 'resume/', title: 'Resume/CV' },
+  { url: 'meta/', title: 'Meta' },
   { url: 'https://github.com/golkelj', title: 'GitHub' },
   { url: 'https://www.linkedin.com/in/jadengoelkel', title: 'LinkedIn' }
 ];
